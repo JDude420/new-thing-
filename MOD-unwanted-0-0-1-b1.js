@@ -9,7 +9,7 @@ out.close();
 if(String(out.toString)==updatelog){
 clientMessage("Your current update , "+updatelog+" , is the current version.");
 }else{ clientMessage("Your current update , "+updatelog+" , is outdated. Get the update , "+String(out.toString)+" , at the site: \n §6https://raw.githubusercontent.com/jdude420/new-thing-/master/MOD-unwanted-0-0-1-b1.js"); }
-}catch(e){ clientMessage("Please connect to the internet");
+}catch(e){ clientMessage("Please connect to the internet"); }
 }
 function newLevel(){
 updateChecker();
