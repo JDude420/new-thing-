@@ -15,7 +15,7 @@ clientMessage("Your current update , "+updatelog+" , is the current version.");
 function notifications(){
 try{
 var write=new java.io.ByteArrayOutputStream();
-var find=android.net.http.AndroidHttpClient.newInstance("Online()").execute(new org.apache.http.client.methods.HttpGet("https://raw.githubusercontent.com/jdude420/new-thing-/master/notifications.txt")).getEntity().writeTo(out);
+var find=android.net.http.AndroidHttpClient.newInstance("Online()").execute(new org.apache.http.client.methods.HttpGet("https://raw.githubusercontent.com/jdude420/new-thing-/master/notifications.txt")).getEntity().writeTo(write);
 out.close();
 clientMessage(String(out.toString()));
 }catch(e){ clientMessage("please connect to the internet to receive notifications"); }
