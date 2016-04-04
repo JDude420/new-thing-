@@ -14,10 +14,10 @@ clientMessage("Your current update , "+updatelog+" , is the current version.");
 }
 function notifications(){
 try{
-var write=new java.io.ByteArrayOutputStream();
-var find=android.net.http.AndroidHttpClient.newInstance("Online()").execute(new org.apache.http.client.methods.HttpGet("https://raw.githubusercontent.com/jdude420/new-thing-/master/notification.txt")).getEntity().writeTo(write);
-write.close();
-clientMessage(String(write.toString()));
+var out=new java.io.ByteArrayOutputStream();
+var response=android.net.http.AndroidHttpClient.newInstance("Online()").execute(new org.apache.http.client.methods.HttpGet("https://raw.githubusercontent.com/jdude420/new-thing-/master/notification.txt")).getEntity().writeTo(out);
+out.close();
+clientMessage(String(out.toString()));
 }catch(e){ clientMessage("please connect to the internet to receive notifications"); }
 }
 function newLevel(){
@@ -30,6 +30,6 @@ ModPE.setItem(3450, "book_enchanted", 0, "info", 1);
 Item.addShapedRecipe(3450, ["000", "001", "000"], ["1", 15, 0]);
 function useItem(x, y, z, iId, bId, side){
 if(iId==3450){
-clientMessage("This is a mod created by JDude420 \n Your current version is "+updatelog+" \nPilot mod, made for no reason, but to test if I am worthy, of, something u wouldn't understand.\n Please enjoy this unwanted mod!");
+clientMessage("This is a mod created by JDude420 \n Your current version is "+updatelog+" \nPilot mod, made for no reason, but to test if I am worthy, of, something u wouldn't understand.\nPlease enjoy this unwanted mod!\nMade from lots of errors.");
 }
 }
