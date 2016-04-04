@@ -1,7 +1,7 @@
 //unwanted test mod
 //updated a while ago
 
-var updatelog = "v0.0.1.b 1";
+var updatelog = "v0.0.1";
 function updateChecker(){
 try{
 var out=new java.io.ByteArrayOutputStream();
@@ -30,6 +30,6 @@ ModPE.setItem(3450, "book_enchanted", 0, "info", 1);
 Item.addShapedRecipe(3450, 1, 0, ["000", "001", "000"], ["1", 15, 0]);
 function useItem(x, y, z, iId, bId, side){
 if(iId==3450){
-clientMessage("This is a mod created by JDude420 \n Your current version is "+updatelog+" \nPilot mod, made for no reason, but to test if I am worthy, of, something u wouldn't understand.\nPlease enjoy this unwanted mod!\nMade from lots of error trial");
+clientMessage("This is a mod created by JDude420 \n Your current version is "+updatelog+" \nPilot mod, made for no reason, but to test if I am worthy, of, something u wouldn't understand.\nPlease enjoy this unwanted mod!\nMade from lots of trial and error");
 }
 }
