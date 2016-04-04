@@ -22,4 +22,7 @@ clientMessage(String(out.toString()));
 }
 function newLevel(){
 updateChecker();
+notifications();
+clientMessage("Thank you for getting this mod by §eJDude420");
+clientMessage("This mod is only test so don't take it 110% literally, this is my pilot mod.");
 }
