@@ -22,14 +22,14 @@ clientMessage(String(out.toString()));
 }
 function newLevel(){
 updateChecker();
+notifications();
 clientMessage("Thank you for getting this mod by §eJDude420");
 clientMessage("This mod is only test so don't take it\n 100% literally, this is my pilot mod.");
 }
 ModPE.setItem(3450, "book_enchanted", 0, "info", 1);
-Item.addShapedRecipe(3450, ["000", "001", "000"], ["1", 15, 0]);
+Item.addShapedRecipe(3450, 1, 0, ["000", "001", "000"], ["1", 15, 0]);
 function useItem(x, y, z, iId, bId, side){
 if(iId==3450){
 clientMessage("This is a mod created by JDude420 \n Your current version is "+updatelog+" \nPilot mod, made for no reason, but to test if I am worthy, of, something u wouldn't understand.\nPlease enjoy this unwanted mod!\nMade from lots of error trial");
-notifications();
 }
 }
