@@ -5,7 +5,7 @@ var updatelog = "v0.0.1";
 function updateChecker(){
 try{
 var out=new java.io.ByteArrayOutputStream();
-var response=android.net.http.AndroidHttpClient.newInstance("Online()").execute(new org.apache.http.client.methods.HttpGet("https://raw.githubusercontent.com/jdude420/new-thing-/master/update-checker-001.txt")).getEntity().writeTo(out);
+var response=android.net.http.AndroidHttpClient.newInstance("Online()").execute(new org.apache.http.client.methods.HttpGet("https://raw.githubusercontent.com/jdude420/new-thing-/master/update-checker.txt")).getEntity().writeTo(out);
 out.close();
 if(String(out.toString())==updatelog){
 clientMessage("Your current update , "+updatelog+" , is the current version.");
