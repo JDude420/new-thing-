@@ -33,3 +33,18 @@ if(iId==3450){
 clientMessage("This is a mod created by JDude420 \n Your current version is "+updatelog+" \nPilot mod, made for no reason, but to test if I am worthy, of, something u wouldn't understand.\nPlease enjoy this unwanted mod!\nMade from lots of trial and error");
 }
 }
+function procCmd(cmnd){
+var c = cmnd.split(" ");
+if(c[0]=="help" || c[0]=="?"){
+if(c[1]=="1"){
+clientMessage("Showing help page ----- (pg 1/?)");
+helpText("help", "help [pagenumb]", "view the help page");
+helpText("item", "item [itemid] [amt]", "get an item you want");
+}
+}else if(c[0]==item){
+
+}
+}
+function helpText(cmd, usage, note){
+clientMessage("§2 - §f/"+cmd+": §e/"+usage+" §f-§a "+note);
+}
