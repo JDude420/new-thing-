@@ -44,6 +44,10 @@ helpText("item", "item [itemid] [amt]", "get an item you want");
 clientMessage("Showing help page ----- (pg 1/?)");
 helpText("help", "help [pagenumb]", "view the help page");
 helpText("item", "item [itemid] [amt]", "get an item you want");}
+}else if(c[0]=="item"){
+if(parseInt(c[1])&&parseInt(c[2])){
+Player.addItemInventory(parseInt(c[1]), parseInt(c[2]), 0);
+}else{clientMessage("§aGiven §b"+parseInt(c[2])+" §aof §b"+parseInt(c[1]));}
 }
 }
 function helpText(cmd, usage, note){
