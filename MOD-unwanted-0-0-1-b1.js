@@ -40,9 +40,10 @@ if(c[1]=="1"){
 clientMessage("Showing help page ----- (pg 1/?)");
 helpText("help", "help [pagenumb]", "view the help page");
 helpText("item", "item [itemid] [amt]", "get an item you want");
-}
-}else if(c[0]==item){
-
+}else{
+clientMessage("Showing help page ----- (pg 1/?)");
+helpText("help", "help [pagenumb]", "view the help page");
+helpText("item", "item [itemid] [amt]", "get an item you want");}
 }
 }
 function helpText(cmd, usage, note){
