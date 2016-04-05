@@ -45,9 +45,12 @@ clientMessage("Showing help page ----- (pg 1/?)");
 helpText("help", "help [pagenumb]", "view the help page");
 helpText("item", "item [itemid] [amt]", "get an item you want");}
 }else if(c[0]=="item"){
-if(!parseInt(c[1])&&!parseInt(c[2])){
-Player.addItemInventory(parseInt(c[1]), parseInt(c[2]), 0);
-}else{clientMessage("§aGiven §b"+parseInt(c[2])+" §aof §b"+parseInt(c[1]));}
+if(!parseInt(c[1])){
+if(!parseInt(c[2])){
+Player.addItemInventory(c[1] , c[2], 0);
+clientMessage("§aGiven §b"+c[2]+" §aof §b"+c[1]);
+}
+}else{clientMessage("Please use an integer");}
 }
 }
 function helpText(cmd, usage, note){
